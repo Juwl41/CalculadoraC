@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <locale.h>
+#include <windows.h>
+int escolha;
+float num1,num2,resp;
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	printf("\n\nCALCULADORA");
+	printf("\n1-------(+)\n");
+	printf("2-------(-)\n");
+	printf("3-------(x)\n");
+	printf("4-------(:)");
+	printf("\n\nDigite oque deseja:");	
+	scanf("%d",&escolha);
+	if (escolha==1){
+		system("cls");
+		printf("\nDigite o número 1 para a soma:");
+		scanf("%f",&num1);
+		printf("\nDigite o número 2 para a soma:");
+		scanf("%f",&num2);
+		resp=num1+num2;
+		printf("A respota é %.1f",resp);
+		
+	}
+	else if (escolha==2){
+		system("cls");
+		printf("\nDigite o número 1 para a subtração:");
+		scanf("%f",&num1);
+		printf("\nDigite o número 2 para a subtração:");
+		scanf("%f",&num2);
+		resp=num1-num2;
+		printf("A respota é %.1f",resp);
+	}
+	else if (escolha==3){
+		system("cls");
+		printf("\nDigite o número 1 para a multiplicação:");
+		scanf("%f",&num1);
+		printf("\nDigite o número 2 para a multiplicação:");
+		scanf("%f",&num2);
+		resp=num1*num2;
+		printf("A respota é %.1f",resp);
+	}
+	else if (escolha==4){
+		system("cls");
+		printf("\nDigite o número 1 para a divisão:");
+		scanf("%f",&num1);
+		printf("\nDigite o número 2 para a divisão:");
+		scanf("%f",&num2);
+		resp=num1/num2;
+		printf("A respota é %.1f",resp);
+	}
+	else{
+		system("cls");
+		printf("Caractere invalido, execute e tente novamente");
+	}
+	return 0;
+}
